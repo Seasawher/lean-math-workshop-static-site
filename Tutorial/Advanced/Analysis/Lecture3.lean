@@ -239,7 +239,7 @@ lemma nestedIntervalLim_mem (n : ℕ) : (nestedIntervalCauSeq U).lim ∈ I(n) :=
 TIPS: 一元集合は`{i}`と表す。証明のどこかで用いるかもしれない。
 -/ 
 
-/-- 閉区間`Icc 0 1`はコンパクト -/
+-- 閉区間`Icc 0 1`はコンパクト
 theorem HasFinSubCover_of_Icc (hU : ∀ (i : ι), IsOpen (U i)) (cover : Icc 0 1 ⊆ ⋃ (i : ι), U i) : 
     HasFinSubCover U (Icc 0 1) := by 
   by_contra H
@@ -257,7 +257,7 @@ theorem HasFinSubCover_of_Icc (hU : ∀ (i : ι), IsOpen (U i)) (cover : Icc 0 1
   sorry
 
 -- 空でない上に有界な実数集合が上限を持つことを用いた別証明
-/-- 閉区間`Icc 0 1`はコンパクト -/
+-- 閉区間`Icc 0 1`はコンパクト
 example (hU : ∀ (i : ι), IsOpen (U i)) (cover : Icc 0 1 ⊆ ⋃ (i : ι), U i) : 
     HasFinSubCover U (Icc 0 1) := by 
   set A := { x : ℝ | x ∈ Icc 0 1 ∧ HasFinSubCover U (Icc 0 x) }
